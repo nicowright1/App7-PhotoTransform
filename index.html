@@ -127,7 +127,10 @@
             }
           context2.putImageData(imageData, 0, 0);
          
-  
+          /* 
+          Set the red and green intensities of my pixels equal to 0, so every pixel of the image has only blue intensities, also puts the new image data (pixel data) (original photo with only the blue intensities of all the image's pixels) on my second canvas (id "dataCanvas")
+          */
+         
         } // end of img.onload
         
         img.src = reader.result;
