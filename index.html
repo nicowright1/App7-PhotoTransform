@@ -121,6 +121,13 @@
           The "context2.putImageData" function below, prints the image data (pixel data) of the original image (loaded onto "myCanvas", seen above with "drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500)") with just the blue color of the image's pixels onto the second canvas with name of "context2"
           */
         
+          for(var i = 0, n = data.length; i < n; i += 4) {
+            data[i] = 0;
+            data[i + 1] = 0;
+            }
+          context2.putImageData(imageData, 0, 0);
+         
+  
         } // end of img.onload
         
         img.src = reader.result;
