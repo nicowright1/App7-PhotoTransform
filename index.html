@@ -110,6 +110,17 @@
           The name of my 2nd canvas is canvas2 so it can differ from the original canvas
           */
          
+          var imageData = context.getImageData(0, 0, 600, 500);
+          var data = imageData.data;
+         
+          /* 
+          Retreived the image data through "context.getImageData" 
+          Got image data (pixel data) from original canvas named "canvas" with "context" (id "myCanvas")
+        
+          Used "context.getImageData" to get the image data (pixel data) of the original image file uploaded on the first canvas (id "myCanvas") with name of "context"
+          The "context2.putImageData" function below, prints the image data (pixel data) of the original image (loaded onto "myCanvas", seen above with "drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500)") with just the blue color of the image's pixels onto the second canvas with name of "context2"
+          */
+        
         } // end of img.onload
         
         img.src = reader.result;
